@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>隨手丟!智慧垃圾桶</title>
+        <style>
+            .navbar {
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                background-color: #fff; 
+                color: #4A645F; 
+                padding: 10px 20px; 
+                height: 60px;
+            }
+            .navbar a {
+                color: #4A645F; 
+                text-decoration: none; 
+                margin: 0 15px; 
+            }
+            .navbar a:hover {
+                text-decoration: underline; 
+            }
+            .conbar {
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background-color: #f0f0f0; 
+                color: #4A645F;
+                padding: 10px 20px; 
+                height: 60px;
+            }
+            .cen {
+                justify-content: center; 
+            }
+            .form-container {
+                text-align: center;
+            }
+        
+            .form-group {
+                /*margin: 10px;*/
+                display: flex; /* 使用 flex 布局 */
+                flex-direction: row; /* 垂直排列元素 */
+                align-items: center; /* 在垂直方向上居中对齐元素 */
+                justify-content: center; /* 在水平方向上居中对齐元素 */
+                margin: 10px 0;
+            }
+        
+            .form-group label {
+                display: inline-block;
+                width: 100px; /* 调整标签宽度 */
+                height: 30px;
+            }
+        
+            .form-group input {
+                width: 300px; /* 调整输入框宽度 */
+                height: 30px;
+            }
+
+            .form-group input {
+                width: 300px; /* 调整输入框宽度 */
+                height: 30px;
+            }
+        
+            .form-group textarea {
+                width: 300px; /* 调整文本框宽度 */
+                height: 100px; /* 调整文本框高度 */
+            }
+
+            .custom-textarea {
+                width: 300px; /* 调整文本框宽度 */
+                height: 100px; /* 调整文本框高度 */
+                /* 添加其他样式属性 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div>
+                <img src="https://i.imgur.com/E45YylA.png" width="90" height="100" alt="圖片載入失敗">
+                {% comment %} <img src="https://i.imgur.com/eDrufx2.png" width="90" height="80" alt="圖片載入失敗"> {% endcomment %}
+            </div>
+            <div>
+                <a href="/">首頁</a>
+                <a href="/about">關於我們</a>
+                <a href="/contact">聯絡我們</a>
+            </div>
+        </div>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

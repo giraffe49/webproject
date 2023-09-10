@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="conbar"><h1>累積數量</h1></div>
+<div>
+{% autoescape off %}
+{{ fig }}
+{% endautoescape %}
+</div>
+<div>
+    {% comment %} <table>
+        <tr>
+            <th>編號</th>
+            <th>類型</th>
+            <th>時間</th>
+        </tr>
+        {% for t1 in t1_list %}
+            <tr>
+                <td> {{ t1.t_id }} </td>
+                <td> {{ t1.t_type }} </td>
+                <td> {{ t1.t_date }} </td>
+            </tr>
+        {% endfor %}
+    </table> {% endcomment %}
+    <div class="conbar"><h1>滿溢度</h1></div>
+        <div style="text-align: center;">
+            {% autoescape off %}
+            <h2>垃圾桶剩餘容量: {{ f_numpre }} %</h2>
+            {% endautoescape %}
+            {% if f_num <= 8 %}
+                <h1 style="color:red;">垃圾桶容量不足</h1>
+            {% elif f_num <= 15 %}
+                <h1 style="color:#FFB630;">垃圾桶容量即將不足</h1>
+            {% else %}
+                <h1>垃圾桶目前容量充足</h1>
+            {% endif %}
+        </div>
+    <div style="display: flex; justify-content: center;">
+        <div style="margin: 0 100px; text-align: center;">
+            {% autoescape off %}
+            <h2>寶特瓶桶剩餘容量: {{ a_numpre }} %</h2>
+            {% endautoescape %}
+            {% if a <= 8 %}
+                <h1 style="color:red;">寶特瓶桶容量不足</h1>
+            {% elif a <= 15 %}
+                <h1 style="color:#FFB630;">寶特瓶桶容量即將不足</h1>
+            {% else %}
+                <h1>寶特瓶桶目前容量充足</h1>
+            {% endif %}
+        </div>
+        <div style="margin: 0 100px; text-align: center;">
+            {% autoescape off %}
+            <h2 >玻璃桶剩餘容量: {{ b_numpre }} %</h2>
+            {% endautoescape %}
+            {% if b <= 8 %}
+                <h1 style="color:red;">玻璃桶容量不足</h1>
+            {% elif b <= 15 %}
+                <h1 style="color:#FFB630;">玻璃桶容量即將不足</h1>
+            {% else %}
+                <h1>玻璃桶目前容量充足</h1>
+            {% endif %}
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div style="margin: 0 100px; text-align: center;">
+            {% autoescape off %}
+            <h2 >鐵鋁罐桶剩餘容量: {{ c_numpre }} %</h2>
+            {% endautoescape %}
+            {% if b <= 8 %}
+                <h1 style="color:red;">鐵鋁罐桶容量不足</h1>
+            {% elif b <= 15 %}
+                <h1 style="color:#FFB630;">鐵鋁罐桶容量即將不足</h1>
+            {% else %}
+                <h1>鐵鋁罐桶目前容量充足</h1>
+            {% endif %}
+        </div>
+        <div style="margin: 0 100px; text-align: center;">
+            {% autoescape off %}
+            <h2>紙類桶剩餘容量: {{ d_numpre }} %</h2>
+            {% endautoescape %}
+            {% if b <= 8 %}
+                <h1 style="color:red;">紙類桶容量不足</h1>
+            {% elif b <= 15 %}
+                <h1 style="color:#FFB630;">紙類桶容量即將不足</h1>
+            {% else %}
+                <h1>紙類桶目前容量充足</h1>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

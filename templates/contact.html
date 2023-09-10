@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="conbar"><h1>聯絡我們</h1></div>
+<br>
+<br>
+<div class="form-container">
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">姓名</label>
+            {{ form.name }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">信箱</label>
+            {{ form.email }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">訊息</label>
+            {% if form.content.value %}
+                <textarea class="custom-textarea" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}" rows="5">{{ form.content.value }}</textarea>
+            {% else %}
+                <textarea class="custom-textarea" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}" rows="5"></textarea>
+            {% endif %}
+        </div>
+
+        <!-- 添加其他表单字段，以相同的方式渲染 -->
+        <br>
+        <div style="display: flex; margin-left:730px">
+            <button type="submit" style="width:100px;height:30px;">提交</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+{% comment %} {% extends "base.html" %}
+{% block content %}
+<div class="conbar"><h1>聯絡我們</h1></div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">提交</button>
+</form>
+{% endblock %} {% endcomment %}
