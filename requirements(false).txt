@@ -1,0 +1,12 @@
+Django
+django-crispy-forms==2.0
+matplotlib
+matplotlib-inline
+mysql-connector-python==8.1.0
+mysqlclient==2.2.0
+pandas 
+Pillow==9.4.0
+plotly==5.16.1
+ply==3.11 
+PyMySQL==1.1.0
+whitenoise==6.5.0
