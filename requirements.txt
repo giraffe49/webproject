@@ -1,7 +1,6 @@
 Django
 django-allauth
 django-paypal
-django-bootstrap3
 Pillow
 pymysql
 matplotlib
