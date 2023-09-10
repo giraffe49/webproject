@@ -4,3 +4,9 @@ django-paypal
 django-bootstrap3
 Pillow
 pymysql
+matplotlib
+plotly
+matplotlib django-matplotlib
+pyserial
+mysql-connector-python
+mysqlclient
