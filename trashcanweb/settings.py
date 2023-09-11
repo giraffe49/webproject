@@ -93,10 +93,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'protest',
-        'USER': 'trashweb',  # 新的MySQL使用者名稱
+        'NAME': 'giraffe$protest',
+        'USER': 'giraffe',  # 新的MySQL使用者名稱
         'PASSWORD': 'cxb4991mysql',  # 新的MySQL密碼
-        'HOST': '127.0.0.1',
+        'HOST': 'giraffe.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
