@@ -5,7 +5,5 @@ Pillow
 pymysql
 matplotlib
 plotly
-matplotlib django-matplotlib
 pyserial
-mysql-connector-python
-mysqlclient
+django-crispy-forms

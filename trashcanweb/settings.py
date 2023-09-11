@@ -83,22 +83,22 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql', 
+    #     'NAME': 'protest',                      
+    #     'USER': 'root',                      
+    #     'PASSWORD': 'cxb4991mysql',               
+    #     'HOST': '127.0.0.1',                           
+    #     'PORT': '3306',                           
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'protest',                      
-        'USER': 'root',                      
-        'PASSWORD': 'cxb4991mysql',               
-        'HOST': '127.0.0.1',                           
-        'PORT': '3306',                           
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'protest',
+        'USER': 'trashweb',  # 新的MySQL使用者名稱
+        'PASSWORD': 'cxb4991mysql',  # 新的MySQL密碼
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
-        # 'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'protest',  # 替換為你的數據庫名稱
-        # 'USER': 'giraffe',  # 替換為你的數據庫用戶名
-        # 'PASSWORD': 'cxb4991mysql',  # 替換為你的數據庫密碼
-        # 'HOST': 'giraffe.mysql.pythonanywhere-services.com',  # 資料庫主機地址
-        # 'PORT': '3306',  # 預設MySQL端口是3306，如果不確定，可以使用這個
-    #}
 }
 
 
